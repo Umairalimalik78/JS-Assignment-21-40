@@ -214,3 +214,69 @@ if (todayDate < 16) {
     document.write("<br>Last fifteen days of the month")
 }
 
+//Q6
+let currentTime = currentDate.getTime()
+document.write("<br><br>Current Date: " , currentDate)
+document.write("<br>Elapsed milliseconds since January 1, 1970: " , currentTime)
+document.write("<br>Elapsed minutes since January 1, 1970: " , Math.floor(currentTime / (1000 * 60)))
+
+//Q7
+if (currentDate.getHours() < 12) {
+    document.write("<br><br>It's AM")
+}else{
+    document.write("<br><br>It's PM")
+}
+
+//Q8
+let laterDate = new Date("December 31, 2022")
+document.write("<br><br>Later date: " , laterDate)
+
+//Q9
+let ramadanDate = new Date("February 19, 2026")
+let daysToRamadan = Math.ceil((currentDate.getTime() - ramadanDate.getTime()) / (1000 * 60 * 60 * 24))
+document.write("<br><br>" + daysToRamadan + " days have passed since 1st Ramadan, 2026")
+
+//Q10
+let referenceDate = new Date("January 1, 2015")
+let secondsSinceReference = Math.floor((currentDate.getTime() - referenceDate.getTime()) / 1000)
+document.write("<br><br>Seconds that have elapsed since January 1, 2015: " + secondsSinceReference)
+
+//Q11
+let currentHour = currentDate.getHours()
+let oneHourAgo = new Date(currentDate.getTime() - (1000 * 60 * 60))
+document.write("<br><br>Current date: " , currentDate)
+document.write("<br>1 hour ago, it was: " , oneHourAgo)
+
+//Q12
+let currentYear = currentDate.getFullYear()
+let hundredYearsAgo = new Date(currentDate.getTime() - (1000 * 60 * 60 * 24 * 365 * 100))
+document.write("<br><br>Current date: " , currentDate)
+document.write("<br>100 years back, it was: " , hundredYearsAgo)
+
+//Q13
+let userBirthYear = +prompt("Enter your birth year", "2002")
+let userAge = currentYear - userBirthYear
+document.write("<br><br>Your age is: " + userAge)
+document.write("<br>Your birth year is: " + userBirthYear)
+
+//Q14
+let customerName = "John Doe"
+let currentMonthIndex = currentDate.getMonth()
+let currentMonthName = monthNames[currentMonthIndex]
+let numberOfUnits = 410
+let chargesPerUnit = 16
+let netAmountPayable = numberOfUnits * chargesPerUnit
+let latePaymentSurcharge = 350
+let grossAmountPayable = netAmountPayable + latePaymentSurcharge
+document.write("<br><br>Customer Name: " + customerName)
+document.write("<br>Current Month: " + currentMonthName)
+document.write("<br>Number of units: " + numberOfUnits)
+document.write("<br>Charges per unit: " + chargesPerUnit)
+document.write("<br><br>Net Amount Payable (within Due Date): " + netAmountPayable)
+document.write("<br>Late Payment Surcharge: " + latePaymentSurcharge)
+document.write("<br>Gross Amount Payable (after Due Date): " + grossAmountPayable)
+
+document.write("<h2>Chapter 31 ✔</h2>")
+document.write("<h2>Chapter 32 ✔</h2>")
+document.write("<h2>Chapter 33 ✔</h2>")
+document.write("<h2>Chapter 34 ✔</h2>")
