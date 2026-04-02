@@ -260,11 +260,11 @@ document.write("<br><br>Your age is: " + userAge)
 document.write("<br>Your birth year is: " + userBirthYear)
 
 //Q14
-let customerName = "John Doe"
+let customerName = "Umair Ali"
 let currentMonthIndex = currentDate.getMonth()
 let currentMonthName = monthNames[currentMonthIndex]
-let numberOfUnits = 410
-let chargesPerUnit = 16
+let numberOfUnits = 410.5
+let chargesPerUnit = 16.8
 let netAmountPayable = numberOfUnits * chargesPerUnit
 let latePaymentSurcharge = 350
 let grossAmountPayable = netAmountPayable + latePaymentSurcharge
@@ -272,9 +272,9 @@ document.write("<br><br>Customer Name: " + customerName)
 document.write("<br>Current Month: " + currentMonthName)
 document.write("<br>Number of units: " + numberOfUnits)
 document.write("<br>Charges per unit: " + chargesPerUnit)
-document.write("<br><br>Net Amount Payable (within Due Date): " + netAmountPayable)
+document.write("<br><br>Net Amount Payable (within Due Date): " + netAmountPayable.toFixed(2))
 document.write("<br>Late Payment Surcharge: " + latePaymentSurcharge)
-document.write("<br>Gross Amount Payable (after Due Date): " + grossAmountPayable)
+document.write("<br>Gross Amount Payable (after Due Date): " + grossAmountPayable.toFixed(2))
 
 document.write("<h2>Chapter 31 ✔</h2>")
 document.write("<h2>Chapter 32 ✔</h2>")
