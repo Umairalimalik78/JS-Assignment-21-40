@@ -254,10 +254,10 @@ document.write("<br><br>Current date: " , currentDate)
 document.write("<br>100 years back, it was: " , hundredYearsAgo)
 
 //Q13
-let userBirthYear = +prompt("Enter your birth year", "2002")
-let userAge = currentYear - userBirthYear
-document.write("<br><br>Your age is: " + userAge)
-document.write("<br>Your birth year is: " + userBirthYear)
+// let userBirthYear = +prompt("Enter your birth year", "2002")
+// let userAge = currentYear - userBirthYear
+// document.write("<br><br>Your age is: " + userAge)
+// document.write("<br>Your birth year is: " + userBirthYear)
 
 //Q14
 let customerName = "Umair Ali"
@@ -280,3 +280,145 @@ document.write("<h2>Chapter 31 ✔</h2>")
 document.write("<h2>Chapter 32 ✔</h2>")
 document.write("<h2>Chapter 33 ✔</h2>")
 document.write("<h2>Chapter 34 ✔</h2>")
+
+// ----------------------------------> Chapter 35-38 <-------------------------------------------
+// Q1
+function currentDateTime() {
+    let now = new Date()
+    document.write("Current date and time: " + now)
+}
+currentDateTime()
+
+// Q2
+function greetUser(firstName, lastName) {
+    let fullName = firstName + " " + lastName
+    alert("Hello " + fullName + "\nWelcome to our website")
+}
+// greetUser("Umair", "Ali")
+
+// Q3
+function addNumbers(num1, num2) {
+    return num1 + num2
+}
+let sum = addNumbers(5, 7)
+document.write("Sum of 5 and 7 is: " + sum)
+
+// Q4
+function calculator(num1, operator , num2) {
+    if (operator === "+") {
+        return num1 + num2
+    } else if (operator === "-") {
+        return num1 - num2
+    } else if (operator === "*") {
+        return num1 * num2
+    } else if (operator === "/") {
+        return num1 / num2
+    }
+}
+let calcResult = calculator(10, "*", 5)
+document.write("<br><br>Result of 10 * 5 is: " + calcResult)
+
+// Q5
+function square(num) {
+    return num * num
+}
+let squaredNum = square(4)
+document.write("<br><br>Square of 4 is: " + squaredNum)
+
+// Q6
+function factorial(num) {
+    if (num === 0 || num === 1) {
+        return 1
+    } else {
+        return num * factorial(num - 1)
+    }
+}
+let factResult = factorial(5)
+document.write("<br><br>Factorial of 5 is: " + factResult)
+document.write("<br><br>")
+
+// Q7
+function countBetween(start, end) {
+    for (let i = start; i <= end; i++) {
+        document.write(i + "<br>")
+    }
+}
+countBetween(1, 10)
+
+// Q8
+function calculateHypotenuse(base, perpendicular) {
+    function calculateSquare(num) {
+        return num * num
+    }
+    let hypotenuseSquare = calculateSquare(base) + calculateSquare(perpendicular)
+    return Math.sqrt(hypotenuseSquare)
+}
+document.write("<br><br>Length of hypotenuse is: " + calculateHypotenuse(3, 4))
+
+// Q9
+function areaOfRectangle(width, height) {
+    return width * height
+}
+document.write("<br><br>Area of rectangle is: " + areaOfRectangle(5, 10))
+let width = 7
+let height = 3
+document.write("<br>Area of rectangle is: " + areaOfRectangle(width, height))
+
+// Q10
+function palindromeCheck(str) {
+    let cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "")
+    let reversedStr = cleanedStr.split("").reverse().join("")
+    return cleanedStr === reversedStr
+}
+document.write("<br><br>Is 'racecar' a palindrome? " + palindromeCheck("racecar"))
+document.write("<br>Is 'hello' a palindrome? " + palindromeCheck("hello"))
+
+// Q11
+function titleCase(str) {
+    let words = str.toLowerCase().split(" ")
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1)
+    }
+    return words.join(" ")
+}
+document.write("<br><br>Title case of 'hello world' is: " + titleCase("hello world"))
+
+// Q12
+function longestWord(str) {
+    let words = str.split(" ")
+    let longest = ""
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > longest.length) {
+            longest = words[i]
+        }
+    }
+    return longest
+}
+document.write("<br><br>Longest word in 'The quick brown fox jumps over the lazy dog' is: " + longestWord("The quick brown fox jumps over the lazy dog"))
+
+// Q13
+function countLetter(str, letter) {
+    let count = 0
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].toLowerCase() === letter.toLowerCase()) {
+            count++
+        }
+    }
+    return count
+}
+document.write("<br><br>Number of occurrences of 'o' in 'The quick brown fox jumps over the lazy dog' is: " + countLetter("The quick brown fox jumps over the lazy dog", "o"))
+
+// Q14
+function calcCircumference(radius) {
+    return 2 * Math.PI * radius
+}
+function calcArea(radius) {
+    return Math.PI * radius * radius
+}
+document.write("<br><br>Circumference of circle with radius 5 is: " + calcCircumference(5))
+document.write("<br>Area of circle with radius 5 is: " + calcArea(5))
+
+document.write("<h2>Chapter 35 ✔</h2>")
+document.write("<h2>Chapter 36 ✔</h2>")
+document.write("<h2>Chapter 37 ✔</h2>")
+document.write("<h2>Chapter 38 ✔</h2>")
