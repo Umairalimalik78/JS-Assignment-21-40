@@ -189,7 +189,7 @@ document.write("<h2>Chapter 30 ✔</h2>")
 // ----------------------------------> Chapter 31-34 <-------------------------------------------
 // Q1
 let currentDate = new Date()
-document.write("Current Date is: " , currentDate)
+document.write("Current Date is: ", currentDate)
 
 //Q2
 let currentMonth = currentDate.getMonth()
@@ -198,8 +198,8 @@ document.write("<br>Current Month: " + monthNames[currentMonth])
 
 //Q3
 let currentDay = currentDate.getDay()
-let halfDayNames = ["Sun", "Mon" , "Tue" , "Wed" , "Thu" , "Fri" , "Sat"]
-document.write("<br>Today is: " , halfDayNames[currentDay])
+let halfDayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+document.write("<br>Today is: ", halfDayNames[currentDay])
 
 //Q4
 if (currentDay == 0 || currentDay == 6) {
@@ -210,26 +210,26 @@ if (currentDay == 0 || currentDay == 6) {
 let todayDate = currentDate.getDate()
 if (todayDate < 16) {
     document.write("<br>First fifteen days of the month")
-}else{
+} else {
     document.write("<br>Last fifteen days of the month")
 }
 
 //Q6
 let currentTime = currentDate.getTime()
-document.write("<br><br>Current Date: " , currentDate)
-document.write("<br>Elapsed milliseconds since January 1, 1970: " , currentTime)
-document.write("<br>Elapsed minutes since January 1, 1970: " , Math.floor(currentTime / (1000 * 60)))
+document.write("<br><br>Current Date: ", currentDate)
+document.write("<br>Elapsed milliseconds since January 1, 1970: ", currentTime)
+document.write("<br>Elapsed minutes since January 1, 1970: ", Math.floor(currentTime / (1000 * 60)))
 
 //Q7
 if (currentDate.getHours() < 12) {
     document.write("<br><br>It's AM")
-}else{
+} else {
     document.write("<br><br>It's PM")
 }
 
 //Q8
 let laterDate = new Date("December 31, 2022")
-document.write("<br><br>Later date: " , laterDate)
+document.write("<br><br>Later date: ", laterDate)
 
 //Q9
 let ramadanDate = new Date("February 19, 2026")
@@ -244,14 +244,14 @@ document.write("<br><br>Seconds that have elapsed since January 1, 2015: " + sec
 //Q11
 let currentHour = currentDate.getHours()
 let oneHourAgo = new Date(currentDate.getTime() - (1000 * 60 * 60))
-document.write("<br><br>Current date: " , currentDate)
-document.write("<br>1 hour ago, it was: " , oneHourAgo)
+document.write("<br><br>Current date: ", currentDate)
+document.write("<br>1 hour ago, it was: ", oneHourAgo)
 
 //Q12
 let currentYear = currentDate.getFullYear()
 let hundredYearsAgo = new Date(currentDate.getTime() - (1000 * 60 * 60 * 24 * 365 * 100))
-document.write("<br><br>Current date: " , currentDate)
-document.write("<br>100 years back, it was: " , hundredYearsAgo)
+document.write("<br><br>Current date: ", currentDate)
+document.write("<br>100 years back, it was: ", hundredYearsAgo)
 
 //Q13
 // let userBirthYear = +prompt("Enter your birth year", "2002")
@@ -304,7 +304,7 @@ let sum = addNumbers(5, 7)
 document.write("Sum of 5 and 7 is: " + sum)
 
 // Q4
-function calculator(num1, operator , num2) {
+function calculator(num1, operator, num2) {
     if (operator === "+") {
         return num1 + num2
     } else if (operator === "-") {
@@ -422,3 +422,45 @@ document.write("<h2>Chapter 35 ✔</h2>")
 document.write("<h2>Chapter 36 ✔</h2>")
 document.write("<h2>Chapter 37 ✔</h2>")
 document.write("<h2>Chapter 38 ✔</h2>")
+
+// ----------------------------------> Chapter 38-40 <-------------------------------------------
+// Q1
+function power(a, b) {
+    return a ** b
+}
+console.log(power(4, 2))
+
+//Q2
+function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)
+}
+console.log(isLeapYear(2020))
+console.log(isLeapYear(2021))
+
+//Q3
+function calcS(a, b, c) {
+    return (a + b + c) / 2
+}
+function calcTriArea(a, b, c) {
+    let s = calcS(a, b, c)
+    return Math.sqrt(s * (s - a) * (s - b) * (s - c))
+}
+console.log(calcTriArea(2, 3, 4))
+
+//Q4
+function calcAvg(marks1, marks2, marks3) {
+    return (marks1 + marks2 + marks3) / 3
+}
+function calcPercent(obt, total) {
+    return (obt / total) * 100
+}
+function calcAvg_Percent(marks1, marks2, marks3,total) {
+    let avg = calcAvg(marks1, marks2, marks3)
+    let obtained = marks1 + marks2 + marks3
+    let percent = calcPercent(obtained,total)
+
+    console.log("Average Marks are: ",avg)
+    console.log("Total Percentage % is: ",percent)
+}
+calcAvg_Percent(55,70,80,300)
+
