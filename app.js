@@ -481,59 +481,6 @@ function removeVowels(str) {
 }
 console.log(removeVowels("Hello World"))
 
-//Q7
-function countVowels(str) {
-    let matches = str.match(/[aeiouAEIOU]/g)
-    return matches ? matches.length : 0
-}
-console.log(countVowels("Hello World"))
-
-//Q8
-function convertKmToMiles(km) {
-    return km * 0.621371
-}
-function convertKmToFeet(km) {
-    return km * 3280.84
-}
-function convertKmToMeters(km) {
-    return km * 1000
-}
-console.log(convertKmToMiles(5))
-console.log(convertKmToFeet(5))
-console.log(convertKmToMeters(5))
-
-function convertKmToCentimeters(km) {
-    return km * 100000
-}
-console.log(convertKmToCentimeters(5))
-
-//Q9
-function calcOvertimePay(hours) {
-    if (hours > 40) {
-        let overtimeHours = hours - 40
-        return overtimeHours * 12
-    }
-    return 0
-}
-console.log(calcOvertimePay(45))
-
-//Q10
-function calcCurrencyNotes(amount) {
-    let notes100 = Math.floor(amount / 100)
-    let remainder = amount % 100
-    let notes50 = Math.floor(remainder / 50)
-    remainder = remainder % 50
-    let notes10 = Math.floor(remainder / 10)
-    return {
-        notes100: notes100,
-        notes50: notes50,
-        notes10: notes10
-    }
-}
-console.log(calcCurrencyNotes(370))
-
 document.write("<h2>Chapter 38 ✔</h2>")
 document.write("<h2>Chapter 39 ✔</h2>")
 document.write("<h2>Chapter 40 ✔</h2>")
-document.write("<h2>Chapter 41 ✔</h2>")
-document.write("<h2>Chapter 42 ✔</h2>")
